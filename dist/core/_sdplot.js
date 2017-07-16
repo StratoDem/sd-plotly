@@ -354,7 +354,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
         } else {
           _xVals = xDate ? data.get(xName).values.map(function (v) {
             return utils.dateFromISO(v);
-          }).toArray() : data.get(xName).toArray();
+          }).toArray() : data.get(xName).values.toArray();
         }
 
         return yNames.map(function (yName, idx) {
