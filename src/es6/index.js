@@ -8,4 +8,5 @@
  *  All Rights Reserved
  */
 
+export * from './core';
 export * from './graphs';
