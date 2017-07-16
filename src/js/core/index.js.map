@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../es6/core/index.js"],"names":[],"mappings":";;;;;;;AAEA;;;;AAGA;;IAAY,K;;;;;;QAGH,M;QAAQ,K,GAAA,K","file":"index.js","sourcesContent":["\n\nimport SDPlot from './_sdplot';\nimport type { Props } from './_sdplot';\n\nimport * as utils from './utils';\n\n\nexport { SDPlot, utils };\nexport type { Props };\n"]}
