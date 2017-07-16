@@ -438,7 +438,7 @@ export default class SDPlot extends React.Component {
       } else {
         xVals = xDate
           ? data.get(xName).values.map(v => utils.dateFromISO(v)).toArray()
-          : data.get(xName).toArray();
+          : data.get(xName).values.toArray();
       }
 
       return yNames.map((yName, idx) => constants.dataToTrace({
