@@ -34,6 +34,7 @@ const component = <BarPlot
 ReactDOM.render(component, myDocumentElement);
 ```
 will create this bar chart:
+
 ![bar chart example](https://user-images.githubusercontent.com/16123745/28250610-ef516a3a-6a3a-11e7-8d57-b030ec5bb45a.png)
 
 ## Components
