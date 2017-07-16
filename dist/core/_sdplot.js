@@ -47,13 +47,13 @@ var _constants = require('./constants');
 
 var constants = _interopRequireWildcard(_constants);
 
-var _utils = require('./utils');
-
-var utils = _interopRequireWildcard(_utils);
-
 var _plotly = require('./_plotly');
 
 var _plotly2 = _interopRequireDefault(_plotly);
+
+var _utils = require('./utils');
+
+var utils = _interopRequireWildcard(_utils);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 

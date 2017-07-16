@@ -35,6 +35,9 @@ var _class, _temp; /**
                     *  All Rights Reserved
                     */
 
+// --- LOCAL IMPORTS --- //
+
+
 var _debounce = require('lodash/debounce');
 
 var _debounce2 = _interopRequireDefault(_debounce);
@@ -55,19 +58,19 @@ var _constants = require('./constants');
 
 var constants = _interopRequireWildcard(_constants);
 
-var _utils = require('./utils');
-
-var utils = _interopRequireWildcard(_utils);
-
 var _plotly = require('./_plotly');
 
 var _plotly2 = _interopRequireDefault(_plotly);
+
+var _utils = require('./utils');
+
+var utils = _interopRequireWildcard(_utils);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/** SDPlot | The base React Plotly component for plots **/
+/** SDPlot | The base React Plotly component for plots */
 
 
 // --- TYPES --- //
@@ -143,7 +146,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
     }
 
     // --- GETTERS --- //
-    /** Plotly layout object **/
+    /** Plotly layout object */
 
   }, {
     key: 'render',
@@ -207,7 +210,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
       return layout;
     }
 
-    /** Plotly x-axis style object **/
+    /** Plotly x-axis style object */
 
   }, {
     key: 'xAxisStyle',
@@ -245,7 +248,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
       };
     }
 
-    /** Plotly y-axis style object **/
+    /** Plotly y-axis style object */
 
   }, {
     key: 'yAxisStyle',
@@ -285,7 +288,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
       };
     }
 
-    /** Plotly legend style object **/
+    /** Plotly legend style object */
 
   }, {
     key: 'legend',
@@ -306,7 +309,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
       };
     }
 
-    /** Plotly margin style object **/
+    /** Plotly margin style object */
 
   }, {
     key: 'margin',
@@ -327,7 +330,7 @@ var SDPlot = (_temp = _class = function (_React$Component) {
       };
     }
 
-    /** Plotly secondary axis style object **/
+    /** Plotly secondary axis style object */
 
   }, {
     key: 'secondaryAxis',

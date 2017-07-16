@@ -14,9 +14,10 @@ import React, { Element } from 'react';
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
 
+// --- LOCAL IMPORTS --- //
 import * as constants from './constants';
-import * as utils from './utils';
 import Plotly from './_plotly';
+import * as utils from './utils';
 
 
 // --- TYPES --- //
@@ -74,140 +75,140 @@ type T_LAYOUT = {
 
 // --- COMPONENT DEFINITION --- //
 export type Props = {
-  /** Div id with which to render the SDPlot **/
+  /** Div id with which to render the SDPlot */
   id: string,
-  /** Data to render in the plot **/
+  /** Data to render in the plot */
   data: DataFrame | Series,
-  /** class to give to SDPlot div **/
+  /** class to give to SDPlot div */
   className: string,
-  /** Type of chart **/
+  /** Type of chart */
   chartType: 'bar' | 'scatter' | 'scattergl',
-  /** Types of each of the traces in the plot **/
+  /** Types of each of the traces in the plot */
   traceTypes: Array<string>,
-  /** Title of the chart **/
+  /** Title of the chart */
   title: string,
-  /** Names for each of the traces **/
+  /** Names for each of the traces */
   traceNames: Array<string>,
-  /** Include a secondary axis? **/
+  /** Include a secondary axis? */
   secondaryAxis: boolean,
-  /** Type of bar chart to plot **/
+  /** Type of bar chart to plot */
   barmode?: 'relative' | 'group' | 'stack',
-  /** Hover info format https://plot.ly/javascript/reference/#scatter-hoverinfo **/
+  /** Hover info format https://plot.ly/javascript/reference/#scatter-hoverinfo */
   hoverinfo?: string,
-  /** Gap between the bars in barplot **/
+  /** Gap between the bars in barplot */
   bargap?: number,
-  /** Array of colors to use for the traces **/
+  /** Array of colors to use for the traces */
   palette: Array<string>,
-  /** Plot.ly configuration object **/ // eslint-disable-next-line
+  /** Plot.ly configuration object */ // eslint-disable-next-line
   configuration: {modeBarButtonsToRemove: Array<string>},
-  /** Height of plot, in pixels **/
+  /** Height of plot, in pixels */
   height?: number,
-  /** Width of plot, in pixels **/
+  /** Width of plot, in pixels */
   width?: number,
 
-  /** Name of the x data series **/
+  /** Name of the x data series */
   xName?: string,
-  /** Label for the x data series to display **/
+  /** Label for the x data series to display */
   xLabel: string,
-  /** Array of tick labels to use **/
+  /** Array of tick labels to use */
   xTickLabels: Array<string | number>,
-  /** Rotation of x tick labels **/
+  /** Rotation of x tick labels */
   xTicksRotation: number,
-  /** Reverse the x axis? **/
+  /** Reverse the x axis? */
   xTicksReverse: boolean,
-  /** Prefix to use for x ticks **/
+  /** Prefix to use for x ticks */
   xTicksPrefix: string,
-  /** d3 formatting string to format x ticks **/
+  /** d3 formatting string to format x ticks */
   xTicksFormat: string,
-  /** d3 formatting string to format x values **/
+  /** d3 formatting string to format x values */
   xType: string,
-  /** Type of range to use for the x axis **/
+  /** Type of range to use for the x axis */
   xRangemode: 'tozero' | 'nonnegative' | 'normal',
-  /** x data is a datetime? **/
+  /** x data is a datetime? */
   xIsDate: boolean,
-  /** Show x-axis tick labels? **/
+  /** Show x-axis tick labels? */
   xShowTickLabels: boolean,
 
-  /** Names of the y data series **/
+  /** Names of the y data series */
   yNames: Array<string>,
-  /** Label for the y data series to display **/
+  /** Label for the y data series to display */
   yLabel: string,
-  /** Rotation of y tick labels **/
+  /** Rotation of y tick labels */
   yTicksRotation: number,
-  /** Reverse the y axis? **/
+  /** Reverse the y axis? */
   yTicksReverse: boolean,
-  /** Prefix to use for y ticks **/
+  /** Prefix to use for y ticks */
   yTicksPrefix: string,
-  /** d3 formatting string to format y ticks **/
+  /** d3 formatting string to format y ticks */
   yTicksFormat: string,
-  /** d3 formatting string to format y values on hover **/
+  /** d3 formatting string to format y values on hover */
   yHoverFormat: string,
-  /** d3 formatting string to format y values **/
+  /** d3 formatting string to format y values */
   yType: string,
-  /** Type of range to use for the y axis **/
+  /** Type of range to use for the y axis */
   yRangemode: 'tozero' | 'nonnegative' | 'normal',
-  /** Show y-axis tick labels? **/
+  /** Show y-axis tick labels? */
   yShowTickLabels: boolean,
 
-  /** Padding in pixels **/
+  /** Padding in pixels */
   padding: number,
-  /** Display horizontal lines on the chart? **/
+  /** Display horizontal lines on the chart? */
   horizontalLines: boolean,
-  /** Display vertical lines on the chart? **/
+  /** Display vertical lines on the chart? */
   verticalLines: boolean,
-  /** Color to make horizontal/vertical lines on the chart **/
+  /** Color to make horizontal/vertical lines on the chart */
   gridColor: string,
-  /** Color of plot background **/
+  /** Color of plot background */
   plotBackgroundColor: string,
-  /** Color of paper background **/
+  /** Color of paper background */
   paperBackgroundColor: string,
-  /** Orientation of chart **/
+  /** Orientation of chart */
   orientation: 'v' | 'h',
-  /** Opacity of data points **/
+  /** Opacity of data points */
   opacity: number,
 
-  /** Left margin for the plot **/
+  /** Left margin for the plot */
   marginLeft: number,
-  /** Top margin for the plot **/
+  /** Top margin for the plot */
   marginTop: number,
-  /** Right margin for the plot **/
+  /** Right margin for the plot */
   marginRight: number,
-  /** Bottom margin for the plot **/
+  /** Bottom margin for the plot */
   marginBottom: number,
 
-  /** Display the legend for the chart? **/
+  /** Display the legend for the chart? */
   showLegend: boolean,
-  /** Location of the chart legend, if displayed **/
+  /** Location of the chart legend, if displayed */
   legendLocation: 'topleft' | 'topright' | 'bottomleft' | 'bottomright',
-  /** Background color for the chart legend, if displayed **/
+  /** Background color for the chart legend, if displayed */
   legendBackgroundColor: string,
-  /** Border color for the chart legend, if displayed **/
+  /** Border color for the chart legend, if displayed */
   legendBorderColor: string,
 
-  /** Name of the font family to use for text **/
+  /** Name of the font family to use for text */
   fontFamily: string,
-  /** Scaling factor for the font, relative to 1 **/
+  /** Scaling factor for the font, relative to 1 */
   fontScale: number,
-  /** Color to use for the font **/
+  /** Color to use for the font */
   fontColor: string,
 
-  /** Display a secondary axis? **/
+  /** Display a secondary axis? */
   secondaryAxis?: boolean,
 
-  /** ms gap during which only the latest window resize event should cause a redraw **/
+  /** ms gap during which only the latest window resize event should cause a redraw */
   resizeDebounce: number,
 
-  /** ms gap during which only the latest redraw requested should occur **/
+  /** ms gap during which only the latest redraw requested should occur */
   redrawDebounce: number,
 
-  /** Display the modebar? **/
+  /** Display the modebar? */
   displayModeBar: boolean,
 };
 
-/** SDPlot | The base React Plotly component for plots **/
+/** SDPlot | The base React Plotly component for plots */
 export default class SDPlot extends React.Component {
   props: Props;
-  plotComponent: Element<*>;
+  plotComponent: Element;
   redraw: () => void;
 
   static defaultProps = {
@@ -266,7 +267,7 @@ export default class SDPlot extends React.Component {
   }
 
   // --- GETTERS --- //
-  /** Plotly layout object **/
+  /** Plotly layout object */
   get layout(): T_LAYOUT {
     const { title, paperBackgroundColor, plotBackgroundColor, barmode,
       fontFamily, fontScale, fontColor, secondaryAxis, showLegend, bargap,
@@ -295,7 +296,7 @@ export default class SDPlot extends React.Component {
     return layout;
   }
 
-  /** Plotly x-axis style object **/
+  /** Plotly x-axis style object */
   get xAxisStyle(): T_AXIS {
     const { xLabel, xTicksReverse, fontScale, xTicksRotation, verticalLines,
       gridColor, paperBackgroundColor, xTicksPrefix, xType, xTicksFormat, xRangemode,
@@ -320,7 +321,7 @@ export default class SDPlot extends React.Component {
     };
   }
 
-  /** Plotly y-axis style object **/
+  /** Plotly y-axis style object */
   get yAxisStyle(): T_AXIS {
     const { yLabel, yTicksReverse, fontScale, yTicksRotation, horizontalLines,
       gridColor, paperBackgroundColor, yTicksPrefix, yType, yTicksFormat,
@@ -346,7 +347,7 @@ export default class SDPlot extends React.Component {
     };
   }
 
-  /** Plotly legend style object **/
+  /** Plotly legend style object */
   get legend(): T_LEGEND {
     const { chartType, legendLocation, fontScale, legendBackgroundColor,
       legendBorderColor } = this.props;
@@ -359,7 +360,7 @@ export default class SDPlot extends React.Component {
     };
   }
 
-  /** Plotly margin style object **/
+  /** Plotly margin style object */
   get margin(): T_MARGIN {
     const { padding, marginLeft, marginRight, marginTop, marginBottom } = this.props;
     return {
@@ -371,7 +372,7 @@ export default class SDPlot extends React.Component {
     };
   }
 
-  /** Plotly secondary axis style object **/
+  /** Plotly secondary axis style object */
   get secondaryAxis(): T_AXIS_SECONDARY {
     const yAxis2 = {...this.yAxisStyle};
     yAxis2.tickangle = constants.STARTING_FIXED_ROTATION - this.props.yTicksRotation;

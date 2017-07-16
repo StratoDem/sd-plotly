@@ -1,0 +1,1977 @@
+{
+  "description": "SDPlot | The base React Plotly component for plots",
+  "methods": [
+    {
+      "name": "toString",
+      "docblock": null,
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "string"
+        }
+      }
+    },
+    {
+      "name": "plotlyResize",
+      "docblock": "Resize the plot on window resize events",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "void"
+        }
+      },
+      "description": "Resize the plot on window resize events"
+    },
+    {
+      "name": "_redraw",
+      "docblock": "Redraw the chart when data is updated",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "void"
+        }
+      },
+      "description": "Redraw the chart when data is updated"
+    },
+    {
+      "name": "layout",
+      "docblock": "Plotly layout object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "signature",
+          "type": "object",
+          "raw": "{\n  title: string,\n  paper_bg_color: string,\n  height?: number,\n  width?: number,\n  plot_bg_color: string,\n  barmode?: 'relative' | 'group' | 'stack',\n  bargap?: number,\n  font: {family: string, size: number, color: string},\n  xaxis: T_AXIS,\n  yaxis: T_AXIS,\n  legend: T_LEGEND,\n  margin: T_MARGIN,\n  showlegend: boolean,\n  yaxis2?: T_AXIS_SECONDARY,\n  height?: number,\n  width?: number,\n}",
+          "signature": {
+            "properties": [
+              {
+                "key": "title",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "paper_bg_color",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "height",
+                "value": {
+                  "name": "number",
+                  "required": false
+                }
+              },
+              {
+                "key": "width",
+                "value": {
+                  "name": "number",
+                  "required": false
+                }
+              },
+              {
+                "key": "plot_bg_color",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "barmode",
+                "value": {
+                  "name": "union",
+                  "raw": "'relative' | 'group' | 'stack'",
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "value": "'relative'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'group'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'stack'"
+                    }
+                  ],
+                  "required": false
+                }
+              },
+              {
+                "key": "bargap",
+                "value": {
+                  "name": "number",
+                  "required": false
+                }
+              },
+              {
+                "key": "font",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{family: string, size: number, color: string}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "family",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "color",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "xaxis",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "title",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "autorange",
+                        "value": {
+                          "name": "union",
+                          "raw": "'reversed' | true",
+                          "elements": [
+                            {
+                              "name": "literal",
+                              "value": "'reversed'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "true"
+                            }
+                          ],
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "titlefont",
+                        "value": {
+                          "name": "signature",
+                          "type": "object",
+                          "raw": "{size: number}",
+                          "signature": {
+                            "properties": [
+                              {
+                                "key": "size",
+                                "value": {
+                                  "name": "number",
+                                  "required": true
+                                }
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickangle",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickfont",
+                        "value": {
+                          "name": "signature",
+                          "type": "object",
+                          "raw": "{size: number}",
+                          "signature": {
+                            "properties": [
+                              {
+                                "key": "size",
+                                "value": {
+                                  "name": "number",
+                                  "required": true
+                                }
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "gridcolor",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickprefix",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "type",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickformat",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "hoverformat",
+                        "value": {
+                          "name": "string",
+                          "required": false
+                        }
+                      },
+                      {
+                        "key": "rangemode",
+                        "value": {
+                          "name": "union",
+                          "raw": "'tozero' | 'nonnegative' | 'normal'",
+                          "elements": [
+                            {
+                              "name": "literal",
+                              "value": "'tozero'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "'nonnegative'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "'normal'"
+                            }
+                          ],
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "showticklabels",
+                        "value": {
+                          "name": "boolean",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "yaxis",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "title",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "autorange",
+                        "value": {
+                          "name": "union",
+                          "raw": "'reversed' | true",
+                          "elements": [
+                            {
+                              "name": "literal",
+                              "value": "'reversed'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "true"
+                            }
+                          ],
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "titlefont",
+                        "value": {
+                          "name": "signature",
+                          "type": "object",
+                          "raw": "{size: number}",
+                          "signature": {
+                            "properties": [
+                              {
+                                "key": "size",
+                                "value": {
+                                  "name": "number",
+                                  "required": true
+                                }
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickangle",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickfont",
+                        "value": {
+                          "name": "signature",
+                          "type": "object",
+                          "raw": "{size: number}",
+                          "signature": {
+                            "properties": [
+                              {
+                                "key": "size",
+                                "value": {
+                                  "name": "number",
+                                  "required": true
+                                }
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "gridcolor",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickprefix",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "type",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "tickformat",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "hoverformat",
+                        "value": {
+                          "name": "string",
+                          "required": false
+                        }
+                      },
+                      {
+                        "key": "rangemode",
+                        "value": {
+                          "name": "union",
+                          "raw": "'tozero' | 'nonnegative' | 'normal'",
+                          "elements": [
+                            {
+                              "name": "literal",
+                              "value": "'tozero'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "'nonnegative'"
+                            },
+                            {
+                              "name": "literal",
+                              "value": "'normal'"
+                            }
+                          ],
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "showticklabels",
+                        "value": {
+                          "name": "boolean",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "legend",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{\n  x: number,\n  y: number,\n  font: {size: number},\n  bgcolor: string,\n  bordercolor: string,\n}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "x",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "y",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "font",
+                        "value": {
+                          "name": "signature",
+                          "type": "object",
+                          "raw": "{size: number}",
+                          "signature": {
+                            "properties": [
+                              {
+                                "key": "size",
+                                "value": {
+                                  "name": "number",
+                                  "required": true
+                                }
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "bgcolor",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "bordercolor",
+                        "value": {
+                          "name": "string",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "margin",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{\n  l: number,\n  t: number,\n  r: number,\n  b: number,\n  pad: number\n}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "l",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "t",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "r",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "b",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      },
+                      {
+                        "key": "pad",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "showlegend",
+                "value": {
+                  "name": "boolean",
+                  "required": true
+                }
+              },
+              {
+                "key": "yaxis2",
+                "value": {
+                  "name": "intersection",
+                  "raw": "T_AXIS & {\n  overlaying: 'y',\n  side: 'right',\n}",
+                  "elements": [
+                    {
+                      "name": "signature",
+                      "type": "object",
+                      "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+                      "signature": {
+                        "properties": [
+                          {
+                            "key": "title",
+                            "value": {
+                              "name": "string",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "autorange",
+                            "value": {
+                              "name": "union",
+                              "raw": "'reversed' | true",
+                              "elements": [
+                                {
+                                  "name": "literal",
+                                  "value": "'reversed'"
+                                },
+                                {
+                                  "name": "literal",
+                                  "value": "true"
+                                }
+                              ],
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "titlefont",
+                            "value": {
+                              "name": "signature",
+                              "type": "object",
+                              "raw": "{size: number}",
+                              "signature": {
+                                "properties": [
+                                  {
+                                    "key": "size",
+                                    "value": {
+                                      "name": "number",
+                                      "required": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "tickangle",
+                            "value": {
+                              "name": "number",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "tickfont",
+                            "value": {
+                              "name": "signature",
+                              "type": "object",
+                              "raw": "{size: number}",
+                              "signature": {
+                                "properties": [
+                                  {
+                                    "key": "size",
+                                    "value": {
+                                      "name": "number",
+                                      "required": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "gridcolor",
+                            "value": {
+                              "name": "string",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "tickprefix",
+                            "value": {
+                              "name": "string",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "type",
+                            "value": {
+                              "name": "string",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "tickformat",
+                            "value": {
+                              "name": "string",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "hoverformat",
+                            "value": {
+                              "name": "string",
+                              "required": false
+                            }
+                          },
+                          {
+                            "key": "rangemode",
+                            "value": {
+                              "name": "union",
+                              "raw": "'tozero' | 'nonnegative' | 'normal'",
+                              "elements": [
+                                {
+                                  "name": "literal",
+                                  "value": "'tozero'"
+                                },
+                                {
+                                  "name": "literal",
+                                  "value": "'nonnegative'"
+                                },
+                                {
+                                  "name": "literal",
+                                  "value": "'normal'"
+                                }
+                              ],
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "showticklabels",
+                            "value": {
+                              "name": "boolean",
+                              "required": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "signature",
+                      "type": "object",
+                      "raw": "{\n  overlaying: 'y',\n  side: 'right',\n}",
+                      "signature": {
+                        "properties": [
+                          {
+                            "key": "overlaying",
+                            "value": {
+                              "name": "literal",
+                              "value": "'y'",
+                              "required": true
+                            }
+                          },
+                          {
+                            "key": "side",
+                            "value": {
+                              "name": "literal",
+                              "value": "'right'",
+                              "required": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "required": false
+                }
+              },
+              {
+                "key": "height",
+                "value": {
+                  "name": "number",
+                  "required": false
+                }
+              },
+              {
+                "key": "width",
+                "value": {
+                  "name": "number",
+                  "required": false
+                }
+              }
+            ]
+          }
+        }
+      },
+      "description": "Plotly layout object"
+    },
+    {
+      "name": "xAxisStyle",
+      "docblock": "Plotly x-axis style object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "signature",
+          "type": "object",
+          "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+          "signature": {
+            "properties": [
+              {
+                "key": "title",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "autorange",
+                "value": {
+                  "name": "union",
+                  "raw": "'reversed' | true",
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "value": "'reversed'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "true"
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "key": "titlefont",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{size: number}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "tickangle",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickfont",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{size: number}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "gridcolor",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickprefix",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "type",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickformat",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "hoverformat",
+                "value": {
+                  "name": "string",
+                  "required": false
+                }
+              },
+              {
+                "key": "rangemode",
+                "value": {
+                  "name": "union",
+                  "raw": "'tozero' | 'nonnegative' | 'normal'",
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "value": "'tozero'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'nonnegative'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'normal'"
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "key": "showticklabels",
+                "value": {
+                  "name": "boolean",
+                  "required": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "description": "Plotly x-axis style object"
+    },
+    {
+      "name": "yAxisStyle",
+      "docblock": "Plotly y-axis style object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "signature",
+          "type": "object",
+          "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+          "signature": {
+            "properties": [
+              {
+                "key": "title",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "autorange",
+                "value": {
+                  "name": "union",
+                  "raw": "'reversed' | true",
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "value": "'reversed'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "true"
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "key": "titlefont",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{size: number}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "tickangle",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickfont",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{size: number}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "gridcolor",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickprefix",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "type",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "tickformat",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "hoverformat",
+                "value": {
+                  "name": "string",
+                  "required": false
+                }
+              },
+              {
+                "key": "rangemode",
+                "value": {
+                  "name": "union",
+                  "raw": "'tozero' | 'nonnegative' | 'normal'",
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "value": "'tozero'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'nonnegative'"
+                    },
+                    {
+                      "name": "literal",
+                      "value": "'normal'"
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "key": "showticklabels",
+                "value": {
+                  "name": "boolean",
+                  "required": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "description": "Plotly y-axis style object"
+    },
+    {
+      "name": "legend",
+      "docblock": "Plotly legend style object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "signature",
+          "type": "object",
+          "raw": "{\n  x: number,\n  y: number,\n  font: {size: number},\n  bgcolor: string,\n  bordercolor: string,\n}",
+          "signature": {
+            "properties": [
+              {
+                "key": "x",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "y",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "font",
+                "value": {
+                  "name": "signature",
+                  "type": "object",
+                  "raw": "{size: number}",
+                  "signature": {
+                    "properties": [
+                      {
+                        "key": "size",
+                        "value": {
+                          "name": "number",
+                          "required": true
+                        }
+                      }
+                    ]
+                  },
+                  "required": true
+                }
+              },
+              {
+                "key": "bgcolor",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              },
+              {
+                "key": "bordercolor",
+                "value": {
+                  "name": "string",
+                  "required": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "description": "Plotly legend style object"
+    },
+    {
+      "name": "margin",
+      "docblock": "Plotly margin style object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "signature",
+          "type": "object",
+          "raw": "{\n  l: number,\n  t: number,\n  r: number,\n  b: number,\n  pad: number\n}",
+          "signature": {
+            "properties": [
+              {
+                "key": "l",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "t",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "r",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "b",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              },
+              {
+                "key": "pad",
+                "value": {
+                  "name": "number",
+                  "required": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "description": "Plotly margin style object"
+    },
+    {
+      "name": "secondaryAxis",
+      "docblock": "Plotly secondary axis style object",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "intersection",
+          "raw": "T_AXIS & {\n  overlaying: 'y',\n  side: 'right',\n}",
+          "elements": [
+            {
+              "name": "signature",
+              "type": "object",
+              "raw": "{\n  title: string,\n  autorange: 'reversed' | true,\n  titlefont: {size: number},\n  tickangle: number,\n  tickfont: {size: number},\n  gridcolor: string,\n  tickprefix: string,\n  type: string,\n  tickformat: string,\n  hoverformat?: string,\n  rangemode: 'tozero' | 'nonnegative' | 'normal',\n  showticklabels: boolean,\n}",
+              "signature": {
+                "properties": [
+                  {
+                    "key": "title",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "autorange",
+                    "value": {
+                      "name": "union",
+                      "raw": "'reversed' | true",
+                      "elements": [
+                        {
+                          "name": "literal",
+                          "value": "'reversed'"
+                        },
+                        {
+                          "name": "literal",
+                          "value": "true"
+                        }
+                      ],
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "titlefont",
+                    "value": {
+                      "name": "signature",
+                      "type": "object",
+                      "raw": "{size: number}",
+                      "signature": {
+                        "properties": [
+                          {
+                            "key": "size",
+                            "value": {
+                              "name": "number",
+                              "required": true
+                            }
+                          }
+                        ]
+                      },
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "tickangle",
+                    "value": {
+                      "name": "number",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "tickfont",
+                    "value": {
+                      "name": "signature",
+                      "type": "object",
+                      "raw": "{size: number}",
+                      "signature": {
+                        "properties": [
+                          {
+                            "key": "size",
+                            "value": {
+                              "name": "number",
+                              "required": true
+                            }
+                          }
+                        ]
+                      },
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "gridcolor",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "tickprefix",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "type",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "tickformat",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "hoverformat",
+                    "value": {
+                      "name": "string",
+                      "required": false
+                    }
+                  },
+                  {
+                    "key": "rangemode",
+                    "value": {
+                      "name": "union",
+                      "raw": "'tozero' | 'nonnegative' | 'normal'",
+                      "elements": [
+                        {
+                          "name": "literal",
+                          "value": "'tozero'"
+                        },
+                        {
+                          "name": "literal",
+                          "value": "'nonnegative'"
+                        },
+                        {
+                          "name": "literal",
+                          "value": "'normal'"
+                        }
+                      ],
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "showticklabels",
+                    "value": {
+                      "name": "boolean",
+                      "required": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "signature",
+              "type": "object",
+              "raw": "{\n  overlaying: 'y',\n  side: 'right',\n}",
+              "signature": {
+                "properties": [
+                  {
+                    "key": "overlaying",
+                    "value": {
+                      "name": "literal",
+                      "value": "'y'",
+                      "required": true
+                    }
+                  },
+                  {
+                    "key": "side",
+                    "value": {
+                      "name": "literal",
+                      "value": "'right'",
+                      "required": true
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "description": "Plotly secondary axis style object"
+    },
+    {
+      "name": "chartData",
+      "docblock": "Convert the Immutable.List passed in to the appropriate array format for Plotly.js",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "Array",
+          "elements": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "raw": "Array<constants.T_TRACE>"
+        }
+      },
+      "description": "Convert the Immutable.List passed in to the appropriate array format for Plotly.js"
+    },
+    {
+      "name": "chartDataMultiple",
+      "docblock": "Convert the Immutable.List for multiple plot to the appropriate array format for Plotly.js",
+      "modifiers": [],
+      "params": [],
+      "returns": {
+        "type": {
+          "name": "Array",
+          "elements": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "raw": "Array<constants.T_TRACE>"
+        }
+      },
+      "description": "Convert the Immutable.List for multiple plot to the appropriate array format for Plotly.js"
+    }
+  ],
+  "props": {
+    "id": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Div id with which to render the SDPlot"
+    },
+    "data": {
+      "flowType": {
+        "name": "union",
+        "raw": "DataFrame | Series",
+        "elements": [
+          {
+            "name": "DataFrame"
+          },
+          {
+            "name": "Series"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Data to render in the plot"
+    },
+    "className": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "class to give to SDPlot div"
+    },
+    "chartType": {
+      "flowType": {
+        "name": "union",
+        "raw": "'bar' | 'scatter' | 'scattergl'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'bar'"
+          },
+          {
+            "name": "literal",
+            "value": "'scatter'"
+          },
+          {
+            "name": "literal",
+            "value": "'scattergl'"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Type of chart"
+    },
+    "traceTypes": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "string"
+          }
+        ],
+        "raw": "Array<string>"
+      },
+      "required": true,
+      "description": "Types of each of the traces in the plot"
+    },
+    "title": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Title of the chart"
+    },
+    "traceNames": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "string"
+          }
+        ],
+        "raw": "Array<string>"
+      },
+      "required": true,
+      "description": "Names for each of the traces"
+    },
+    "secondaryAxis": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": false,
+      "description": "Include a secondary axis?"
+    },
+    "barmode": {
+      "flowType": {
+        "name": "union",
+        "raw": "'relative' | 'group' | 'stack'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'relative'"
+          },
+          {
+            "name": "literal",
+            "value": "'group'"
+          },
+          {
+            "name": "literal",
+            "value": "'stack'"
+          }
+        ]
+      },
+      "required": false,
+      "description": "Type of bar chart to plot"
+    },
+    "hoverinfo": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Hover info format https://plot.ly/javascript/reference/#scatter-hoverinfo"
+    },
+    "bargap": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "Gap between the bars in barplot"
+    },
+    "palette": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "string"
+          }
+        ],
+        "raw": "Array<string>"
+      },
+      "required": true,
+      "description": "Array of colors to use for the traces"
+    },
+    "configuration": {
+      "flowType": {
+        "name": "signature",
+        "type": "object",
+        "raw": "{modeBarButtonsToRemove: Array<string>}",
+        "signature": {
+          "properties": [
+            {
+              "key": "modeBarButtonsToRemove",
+              "value": {
+                "name": "Array",
+                "elements": [
+                  {
+                    "name": "string"
+                  }
+                ],
+                "raw": "Array<string>",
+                "required": true
+              }
+            }
+          ]
+        }
+      },
+      "required": true,
+      "description": "Plot.ly configuration object"
+    },
+    "height": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "Height of plot, in pixels"
+    },
+    "width": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "Width of plot, in pixels"
+    },
+    "xName": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Name of the x data series"
+    },
+    "xLabel": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Label for the x data series to display"
+    },
+    "xTickLabels": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "union",
+            "raw": "string | number",
+            "elements": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "number"
+              }
+            ]
+          }
+        ],
+        "raw": "Array<string | number>"
+      },
+      "required": true,
+      "description": "Array of tick labels to use"
+    },
+    "xTicksRotation": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Rotation of x tick labels"
+    },
+    "xTicksReverse": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Reverse the x axis?"
+    },
+    "xTicksPrefix": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Prefix to use for x ticks"
+    },
+    "xTicksFormat": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "d3 formatting string to format x ticks"
+    },
+    "xType": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "d3 formatting string to format x values"
+    },
+    "xRangemode": {
+      "flowType": {
+        "name": "union",
+        "raw": "'tozero' | 'nonnegative' | 'normal'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'tozero'"
+          },
+          {
+            "name": "literal",
+            "value": "'nonnegative'"
+          },
+          {
+            "name": "literal",
+            "value": "'normal'"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Type of range to use for the x axis"
+    },
+    "xIsDate": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "x data is a datetime?"
+    },
+    "xShowTickLabels": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Show x-axis tick labels?"
+    },
+    "yNames": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "string"
+          }
+        ],
+        "raw": "Array<string>"
+      },
+      "required": true,
+      "description": "Names of the y data series"
+    },
+    "yLabel": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Label for the y data series to display"
+    },
+    "yTicksRotation": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Rotation of y tick labels"
+    },
+    "yTicksReverse": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Reverse the y axis?"
+    },
+    "yTicksPrefix": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Prefix to use for y ticks"
+    },
+    "yTicksFormat": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "d3 formatting string to format y ticks"
+    },
+    "yHoverFormat": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "d3 formatting string to format y values on hover"
+    },
+    "yType": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "d3 formatting string to format y values"
+    },
+    "yRangemode": {
+      "flowType": {
+        "name": "union",
+        "raw": "'tozero' | 'nonnegative' | 'normal'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'tozero'"
+          },
+          {
+            "name": "literal",
+            "value": "'nonnegative'"
+          },
+          {
+            "name": "literal",
+            "value": "'normal'"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Type of range to use for the y axis"
+    },
+    "yShowTickLabels": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Show y-axis tick labels?"
+    },
+    "padding": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Padding in pixels"
+    },
+    "horizontalLines": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Display horizontal lines on the chart?"
+    },
+    "verticalLines": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Display vertical lines on the chart?"
+    },
+    "gridColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Color to make horizontal/vertical lines on the chart"
+    },
+    "plotBackgroundColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Color of plot background"
+    },
+    "paperBackgroundColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Color of paper background"
+    },
+    "orientation": {
+      "flowType": {
+        "name": "union",
+        "raw": "'v' | 'h'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'v'"
+          },
+          {
+            "name": "literal",
+            "value": "'h'"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Orientation of chart"
+    },
+    "opacity": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Opacity of data points"
+    },
+    "marginLeft": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Left margin for the plot"
+    },
+    "marginTop": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Top margin for the plot"
+    },
+    "marginRight": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Right margin for the plot"
+    },
+    "marginBottom": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Bottom margin for the plot"
+    },
+    "showLegend": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Display the legend for the chart?"
+    },
+    "legendLocation": {
+      "flowType": {
+        "name": "union",
+        "raw": "'topleft' | 'topright' | 'bottomleft' | 'bottomright'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'topleft'"
+          },
+          {
+            "name": "literal",
+            "value": "'topright'"
+          },
+          {
+            "name": "literal",
+            "value": "'bottomleft'"
+          },
+          {
+            "name": "literal",
+            "value": "'bottomright'"
+          }
+        ]
+      },
+      "required": true,
+      "description": "Location of the chart legend, if displayed"
+    },
+    "legendBackgroundColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Background color for the chart legend, if displayed"
+    },
+    "legendBorderColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Border color for the chart legend, if displayed"
+    },
+    "fontFamily": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Name of the font family to use for text"
+    },
+    "fontScale": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Scaling factor for the font, relative to 1"
+    },
+    "fontColor": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Color to use for the font"
+    },
+    "resizeDebounce": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "ms gap during which only the latest window resize event should cause a redraw"
+    },
+    "redrawDebounce": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "ms gap during which only the latest redraw requested should occur"
+    },
+    "displayModeBar": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": true,
+      "description": "Display the modebar?"
+    }
+  }
+}

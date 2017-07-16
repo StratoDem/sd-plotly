@@ -1,0 +1,10 @@
+# Packages
+node_modules/
+
+# IntelliJ project files
+.idea
+
+# Documentation
+__tests__/
+docs
+scripts
