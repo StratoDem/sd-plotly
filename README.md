@@ -19,16 +19,23 @@ import { DataFrame } from 'pandas-js';
 
 const component = <BarPlot 
     id="my-id-to-render-into"
-    data={new DataFrame([{x: 1, y: 2}, {x: 2, y: 3}, {x: 3, y: 4}])}
+    data={df}
     xName="x"
-    yNames=["y"]
-    xTickLabels=["One", "Two", "Three"]
+    yNames={["y"]}
     yType="$,.0f"
     yTicksFormat="$,.0f"
-/>;
+    xLabel="X"
+    yLabel="Y"
+    xTicks={[1, 2, 3]}
+    title="Title"
+    marginTop={50}
+  />;
 
 ReactDOM.render(component, myDocumentElement);
 ```
+will create this bar chart:
+
+![bar chart example](https://user-images.githubusercontent.com/16123745/28250610-ef516a3a-6a3a-11e7-8d57-b030ec5bb45a.png)
 
 ## Components
 
