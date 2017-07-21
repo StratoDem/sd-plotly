@@ -11,7 +11,7 @@
     "immutable": "^3.8.1",
     "lodash": "^4.17.4",
     "pandas-js": "^0.1.28",
-    "plotly.js": "^1.28.3",
+    "plotly.js": "^1.29.0",
     "react": "^15.6.1"
   },
   "devDependencies": {
