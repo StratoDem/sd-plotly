@@ -114,8 +114,10 @@ var SDPlot = (_temp = _class = function (_React$Component) {
           displayModeBar = _props.displayModeBar;
 
 
-      _plotly2.default.newPlot(id, this.chartData, this.layout, displayModeBar ? configuration : { displayModeBar: displayModeBar });
-      this.plotlyResize();
+      if (document.getElementById(id) !== null) {
+        _plotly2.default.newPlot(id, this.chartData, this.layout, displayModeBar ? configuration : { displayModeBar: displayModeBar });
+        this.plotlyResize();
+      }
     }
   }, {
     key: 'render',

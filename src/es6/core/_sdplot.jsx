@@ -261,9 +261,11 @@ export default class SDPlot extends React.Component {
   _redraw(): void {
     const { id, configuration, displayModeBar } = this.props;
 
-    Plotly.newPlot(id, this.chartData, this.layout,
-      displayModeBar ? configuration : {displayModeBar});
-    this.plotlyResize();
+    if (document.getElementById(id) !== null) {
+      Plotly.newPlot(id, this.chartData, this.layout,
+        displayModeBar ? configuration : {displayModeBar});
+      this.plotlyResize();
+    }
   }
 
   // --- GETTERS --- //
