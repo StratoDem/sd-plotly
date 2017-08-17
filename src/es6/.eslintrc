@@ -10,6 +10,7 @@
       }
     ],
     "camelcase": "off",
+    "jsx-a11y/href-no-hash": "off",
     "no-undef": "off",
     "import/extensions": "off",
     "no-underscore-dangle": "off",

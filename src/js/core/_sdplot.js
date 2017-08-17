@@ -25,7 +25,7 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _class, _temp; /**
+var _class, _temp; /** 
                     * StratoDem Analytics : _sdplot
                     * Principal Author(s) : Michael Clawar
                     * Secondary Author(s) :

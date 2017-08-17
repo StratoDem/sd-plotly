@@ -1,4 +1,4 @@
-/**
+/** @flow
  * StratoDem Analytics : _sdplot
  * Principal Author(s) : Michael Clawar
  * Secondary Author(s) :
@@ -208,7 +208,7 @@ export type Props = {
 /** SDPlot | The base React Plotly component for plots */
 export default class SDPlot extends React.Component {
   props: Props;
-  plotComponent: Element;
+  plotComponent: Element<*>;
   redraw: () => void;
 
   static defaultProps = {
@@ -395,7 +395,7 @@ export default class SDPlot extends React.Component {
     const { data, traceNames, orientation, xName, xIsDate, xTickLabels,
       palette, secondaryAxis, opacity, yNames, hoverinfo } = this.props;
 
-    if (data.length === 0)  // If we have empty data, let's just skip quickly
+    if (data.length === 0) // If we have empty data, let's just skip quickly
       return [];
 
     let xDate = false;
