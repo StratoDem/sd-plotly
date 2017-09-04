@@ -33,7 +33,7 @@ var _debounce2 = _interopRequireDefault(_debounce);
 
 var _react = require('react');
 
-var _react2 = _interopRequireDefault(_react);
+var React = _interopRequireWildcard(_react);
 
 var _frame = require('pandas-js/dist/core/frame');
 
@@ -128,10 +128,10 @@ var SDPlot = (_temp = _class = function (_React$Component) {
           className = _props2.className,
           id = _props2.id;
 
-      return _react2.default.createElement(
+      return React.createElement(
         'div',
         { className: className },
-        _react2.default.createElement('div', {
+        React.createElement('div', {
           ref: function ref(component) {
             _this2.plotComponent = component;
           },
@@ -413,5 +413,5 @@ var SDPlot = (_temp = _class = function (_React$Component) {
     }
   }]);
   return SDPlot;
-}(_react2.default.Component), _class.defaultProps = (0, _extends3.default)({}, constants.CHART_STYLE_DEFAULTS, constants.X_AXIS_STYLE_DEFAULTS, constants.Y_AXIS_STYLE_DEFAULTS, constants.PAPER_STYLE_DEFAULTS, constants.LEGEND_STYLE_DEFAULTS, constants.FONT_STYLE_DEFAULTS), _temp);
+}(React.Component), _class.defaultProps = (0, _extends3.default)({}, constants.CHART_STYLE_DEFAULTS, constants.X_AXIS_STYLE_DEFAULTS, constants.Y_AXIS_STYLE_DEFAULTS, constants.PAPER_STYLE_DEFAULTS, constants.LEGEND_STYLE_DEFAULTS, constants.FONT_STYLE_DEFAULTS), _temp);
 exports.default = SDPlot;

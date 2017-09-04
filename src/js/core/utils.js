@@ -18,7 +18,7 @@ var dateFromISO = exports.dateFromISO = function dateFromISO(isoDate) {
   return new Date(isoDate).toISOString().split('T')[0];
 };
 
-/** Return true if the browser supports WebGL **/
+/** Return true if the browser supports WebGL */
 var webGLSupported = exports.webGLSupported = function webGLSupported() {
   try {
     var canvas = document.createElement('canvas');

@@ -40,9 +40,11 @@ var _class, _temp; /**
 
 var _react = require('react');
 
-var _react2 = _interopRequireDefault(_react);
+var React = _interopRequireWildcard(_react);
 
 var _core = require('../core');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58,11 +60,11 @@ var HistogramPlot = (_temp = _class = function (_React$PureComponent) {
   (0, _createClass3.default)(HistogramPlot, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_core.SDPlot, (0, _extends3.default)({}, this.props, { chartType: 'histogram' }));
+      return React.createElement(_core.SDPlot, (0, _extends3.default)({}, this.props, { chartType: 'histogram' }));
     }
   }]);
   return HistogramPlot;
-}(_react2.default.PureComponent), _class.defaultProps = _core.SDPlot.defaultProps, _temp);
+}(React.PureComponent), _class.defaultProps = _core.SDPlot.defaultProps, _temp);
 exports.default = HistogramPlot;
 
 //# sourceMappingURL=histogram.js.map

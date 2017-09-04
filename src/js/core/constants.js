@@ -34,7 +34,7 @@ var LEGEND_LOCATIONS = exports.LEGEND_LOCATIONS = {
   bottomright: { x: 1, y: 0 }
 };
 
-/** Convert data from params to a Plotly tract object **/
+/** Convert data from params to a Plotly tract object */
 var dataToTrace = exports.dataToTrace = function dataToTrace(params) {
   var trace = {
     x: params.xVals,
@@ -62,7 +62,7 @@ var dataToTrace = exports.dataToTrace = function dataToTrace(params) {
 var MARGIN_WITH_LEGEND = exports.MARGIN_WITH_LEGEND = { left: 60, top: 50, right: 50, bottom: 60 };
 var MARGIN_WITHOUT_LEGEND = exports.MARGIN_WITHOUT_LEGEND = { left: 60, top: 20, right: 10, bottom: 50 };
 
-/** X AXIS STYLE **/
+/** X AXIS STYLE */
 var X_AXIS_STYLE_DEFAULTS = exports.X_AXIS_STYLE_DEFAULTS = {
   xLabel: '',
   xTickLabels: [],
@@ -76,7 +76,7 @@ var X_AXIS_STYLE_DEFAULTS = exports.X_AXIS_STYLE_DEFAULTS = {
   xIsDate: false
 };
 
-/** Y AXIS STYLE **/
+/** Y AXIS STYLE */
 var Y_AXIS_STYLE_DEFAULTS = exports.Y_AXIS_STYLE_DEFAULTS = {
   yNames: [''],
   yLabel: '',
@@ -91,7 +91,7 @@ var Y_AXIS_STYLE_DEFAULTS = exports.Y_AXIS_STYLE_DEFAULTS = {
   yShowTickLabels: true
 };
 
-/** PAPER_STYLE **/
+/** PAPER_STYLE */
 var PAPER_STYLE_DEFAULTS = exports.PAPER_STYLE_DEFAULTS = {
   horizontalLines: true,
   verticalLines: false,
@@ -107,7 +107,7 @@ var PAPER_STYLE_DEFAULTS = exports.PAPER_STYLE_DEFAULTS = {
   padding: 0
 };
 
-/** LEGEND STYLE **/
+/** LEGEND STYLE */
 var LEGEND_STYLE_DEFAULTS = exports.LEGEND_STYLE_DEFAULTS = {
   showLegend: false,
   legendLocation: 'topright',
