@@ -9,7 +9,7 @@
  */
 
 
-import React from 'react';
+import * as React from 'react';
 
 // --- LOCAL IMPORTS --- //
 import { SDPlot, utils } from '../core';
@@ -17,7 +17,7 @@ import type { Props } from '../core';
 
 
 /** ScatterPlot | A React Plotly component extending SDPlot for scatter plots */
-export default class ScatterPlot extends React.PureComponent {
+export default class ScatterPlot extends React.PureComponent<Props> {
   props: Props;
 
   static defaultProps = SDPlot.defaultProps;

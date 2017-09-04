@@ -8,7 +8,7 @@
  *  All Rights Reserved
  */
 
-import React from 'react';
+import * as React from 'react';
 
 // --- LOCAL IMPORTS --- //
 import { SDPlot } from '../core';
@@ -16,7 +16,7 @@ import type { Props } from '../core';
 
 
 /** HistogramPlot | A React Plotly component extending SDPlot for histogram plots */
-export default class HistogramPlot extends React.PureComponent {
+export default class HistogramPlot extends React.PureComponent<Props> {
   props: Props;
 
   static defaultProps = SDPlot.defaultProps;

@@ -13,7 +13,7 @@ export const dateFromISO = (isoDate: string): string =>
   new Date(isoDate).toISOString().split('T')[0];
 
 
-/** Return true if the browser supports WebGL **/
+/** Return true if the browser supports WebGL */
 export const webGLSupported = (): boolean => {
   try {
     const canvas = document.createElement('canvas');

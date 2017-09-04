@@ -49,7 +49,7 @@ export const LEGEND_LOCATIONS = {
 };
 
 
-/** Convert data from params to a Plotly tract object **/
+/** Convert data from params to a Plotly tract object */
 export const dataToTrace = (params: T_TRACE_PARAMS): T_TRACE => {
   const trace = {
     x: params.xVals,
@@ -79,7 +79,7 @@ export const MARGIN_WITH_LEGEND = {left: 60, top: 50, right: 50, bottom: 60};
 export const MARGIN_WITHOUT_LEGEND = {left: 60, top: 20, right: 10, bottom: 50};
 
 
-/** X AXIS STYLE **/
+/** X AXIS STYLE */
 export const X_AXIS_STYLE_DEFAULTS = {
   xLabel: '',
   xTickLabels: [],
@@ -93,7 +93,7 @@ export const X_AXIS_STYLE_DEFAULTS = {
   xIsDate: false,
 };
 
-/** Y AXIS STYLE **/
+/** Y AXIS STYLE */
 export const Y_AXIS_STYLE_DEFAULTS = {
   yNames: [''],
   yLabel: '',
@@ -108,7 +108,7 @@ export const Y_AXIS_STYLE_DEFAULTS = {
   yShowTickLabels: true,
 };
 
-/** PAPER_STYLE **/
+/** PAPER_STYLE */
 export const PAPER_STYLE_DEFAULTS = {
   horizontalLines: true,
   verticalLines: false,
@@ -124,7 +124,7 @@ export const PAPER_STYLE_DEFAULTS = {
   padding: 0,
 };
 
-/** LEGEND STYLE **/
+/** LEGEND STYLE */
 export const LEGEND_STYLE_DEFAULTS = {
   showLegend: false,
   legendLocation: 'topright',

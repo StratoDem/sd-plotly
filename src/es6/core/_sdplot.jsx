@@ -9,7 +9,7 @@
  */
 
 import debounce from 'lodash/debounce';
-import React, { Element } from 'react';
+import * as React from 'react';
 
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
@@ -206,9 +206,9 @@ export type Props = {
 };
 
 /** SDPlot | The base React Plotly component for plots */
-export default class SDPlot extends React.Component {
+export default class SDPlot extends React.Component<Props> {
   props: Props;
-  plotComponent: Element<*>;
+  plotComponent: React.Element<*>;
   redraw: () => void;
 
   static defaultProps = {
@@ -488,7 +488,7 @@ export default class SDPlot extends React.Component {
     const { className, id } = this.props;
     return (
       <div className={className}>
-        <div
+        <div // $FlowFixMe
           ref={(component) => { this.plotComponent = component; }}
           id={id}
           className={`${className}-inner`}
