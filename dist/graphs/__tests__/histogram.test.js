@@ -28,22 +28,21 @@ var _histogram2 = _interopRequireDefault(_histogram);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-describe('<BarPlot />', function () {
+describe('<HistogramPlot />', function () {
   describe('rendering', function () {
     it('Renders properly', function () {
       var data = new _frame2.default(_immutable2.default.Map({
         x: new _series2.default([1, 2, 3, 4])
       }));
-      var plot = (0, _enzyme.render)(_react2.default.createElement(_histogram2.default, {
+      var plot = (0, _enzyme.shallow)(_react2.default.createElement(_histogram2.default, {
         id: 'test-id',
         className: 'main-graph',
         data: data,
         yNames: ['x']
       }));
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
-      expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
+      expect(plot.find(_sdplot2.default).length).toEqual(1);
+      expect(plot.find(_sdplot2.default).props().id).toEqual('test-id');
     });
 
     it('Has the right data after render', function () {

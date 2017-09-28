@@ -31,29 +31,29 @@ describe('<SDPlot />', function () {
         x: new _series2.default([1, 2, 3, 4]),
         y: new _series2.default([2, 3, 4, 5])
       }));
-      var plot = (0, _enzyme.render)(_react2.default.createElement(_sdplot2.default, {
+      var plot = (0, _enzyme.mount)(_react2.default.createElement(_sdplot2.default, {
         id: 'test-id',
         className: 'main-graph',
         data: data,
         yNames: ['x', 'y']
       }));
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
+      expect(plot.find('.main-graph').not(_sdplot2.default).length).toEqual(1);
+      expect(plot.find('.main-graph').not(_sdplot2.default).find('#test-id').length).toEqual(1);
       expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
     });
 
     it('Handles an empty DataFrame', function () {
       var data = new _frame2.default([]);
-      var plot = (0, _enzyme.render)(_react2.default.createElement(_sdplot2.default, {
+      var plot = (0, _enzyme.mount)(_react2.default.createElement(_sdplot2.default, {
         id: 'test-id',
         className: 'main-graph',
         data: data,
         yNames: []
       }));
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
+      expect(plot.find('.main-graph').not(_sdplot2.default).length).toEqual(1);
+      expect(plot.find('.main-graph').not(_sdplot2.default).find('#test-id').length).toEqual(1);
       expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
     });
 

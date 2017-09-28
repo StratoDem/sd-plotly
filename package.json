@@ -11,13 +11,13 @@
     "immutable": "^3.8.1",
     "lodash": "^4.17.4",
     "pandas-js": "^0.2.4",
-    "plotly.js": "^1.30.0",
-    "react": "^15.6.1"
+    "plotly.js": "^1.30.1",
+    "react": "^16.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-jest": "^20.0.3",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-react-flow-props-to-prop-types": "^0.15.0",
     "babel-plugin-syntax-flow": "^6.18.0",
@@ -30,22 +30,23 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "enzyme": "^2.9.1",
-    "eslint": "^4.6.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
-    "flow-bin": "^0.54.0",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.55.0",
     "flow-remove-types": "^1.2.1",
-    "jest": "^20.0.4",
-    "jest-cli": "*",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
     "jsdoc-parse": "^3.0.0",
     "jsdoc-to-markdown": "^3.0.0",
     "npm-check-updates": "^2.12.1",
-    "react-docgen": "^2.17.0",
-    "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1"
+    "react-docgen": "^2.18.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
   },
   "scripts": {
     "build": "babel src/es6 --out-dir dist --no-comments",
@@ -68,6 +69,9 @@
     ],
     "roots": [
       "src/js"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/js/_test-env.js"
     ]
   },
   "repository": {
@@ -85,9 +89,6 @@
   "contributors": [
     {
       "name": "Michael Clawar"
-    },
-    {
-      "name": "Raymond Mead"
     }
   ],
   "license": "MIT",

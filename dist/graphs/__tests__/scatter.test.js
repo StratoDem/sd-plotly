@@ -35,16 +35,17 @@ describe('<ScatterPlot />', function () {
         x: new _series2.default([1, 2, 3, 4]),
         y: new _series2.default([2, 3, 4, 5])
       }));
-      var plot = (0, _enzyme.render)(_react2.default.createElement(_scatter2.default, {
+      var plot = (0, _enzyme.shallow)(_react2.default.createElement(_scatter2.default, {
         id: 'test-id',
         className: 'main-graph',
         data: data,
         yNames: ['x', 'y']
       }));
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
-      expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
+      console.log(plot.debug());
+
+      expect(plot.find(_sdplot2.default).length).toEqual(1);
+      expect(plot.find(_sdplot2.default).props().id).toEqual('test-id');
     });
 
     it('Has the right data after render', function () {

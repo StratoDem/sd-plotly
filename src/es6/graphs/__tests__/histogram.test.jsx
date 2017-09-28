@@ -11,7 +11,7 @@
 import Immutable from 'immutable';
 import React from 'react';
 
-import { render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
 
@@ -20,22 +20,21 @@ import SDPlot from '../../core/_sdplot';
 import HistogramPlot from '../histogram';
 
 
-describe('<BarPlot />', () => {
+describe('<HistogramPlot />', () => {
   describe('rendering', () => {
     it('Renders properly', () => {
       const data = new DataFrame(Immutable.Map({
         x: new Series([1, 2, 3, 4]),
       }));
-      const plot = render(<HistogramPlot
+      const plot = shallow(<HistogramPlot
         id="test-id"
         className="main-graph"
         data={data}
         yNames={['x']}
       />);
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
-      expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
+      expect(plot.find(SDPlot).length).toEqual(1);
+      expect(plot.find(SDPlot).props().id).toEqual('test-id');
     });
 
     it('Has the right data after render', () => {

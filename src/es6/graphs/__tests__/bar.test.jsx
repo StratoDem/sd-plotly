@@ -11,7 +11,7 @@
 import Immutable from 'immutable';
 import React from 'react';
 
-import { render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
 
@@ -27,16 +27,15 @@ describe('<BarPlot />', () => {
         x: new Series([1, 2, 3, 4]),
         y: new Series([2, 3, 4, 5]),
       }));
-      const plot = render(<BarPlot
+      const plot = shallow(<BarPlot
         id="test-id"
         className="main-graph"
         data={data}
         yNames={['x', 'y']}
       />);
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
-      expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
+      expect(plot.find(SDPlot).length).toEqual(1);
+      expect(plot.find(SDPlot).props().id).toEqual('test-id');
     });
 
     it('Has the right data after render', () => {

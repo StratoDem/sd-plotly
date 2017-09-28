@@ -11,7 +11,7 @@
 import Immutable from 'immutable';
 import React from 'react';
 
-import { render, shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
 
@@ -26,29 +26,29 @@ describe('<SDPlot />', () => {
         x: new Series([1, 2, 3, 4]),
         y: new Series([2, 3, 4, 5]),
       }));
-      const plot = render(<SDPlot
+      const plot = mount(<SDPlot
         id="test-id"
         className="main-graph"
         data={data}
         yNames={['x', 'y']}
       />);
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
+      expect(plot.find('.main-graph').not(SDPlot).length).toEqual(1);
+      expect(plot.find('.main-graph').not(SDPlot).find('#test-id').length).toEqual(1);
       expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
     });
 
     it('Handles an empty DataFrame', () => {
       const data = new DataFrame([]);
-      const plot = render(<SDPlot
+      const plot = mount(<SDPlot
         id="test-id"
         className="main-graph"
         data={data}
         yNames={[]}
       />);
 
-      expect(plot.find('.main-graph').length).toEqual(1);
-      expect(plot.find('.main-graph').find('#test-id').length).toEqual(1);
+      expect(plot.find('.main-graph').not(SDPlot).length).toEqual(1);
+      expect(plot.find('.main-graph').not(SDPlot).find('#test-id').length).toEqual(1);
       expect(plot.find('.main-graph').find('.main-graph-inner').length).toEqual(1);
     });
 
