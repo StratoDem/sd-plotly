@@ -13,10 +13,11 @@ import * as React from 'react';
 
 import DataFrame from 'pandas-js/dist/core/frame';
 import Series from 'pandas-js/dist/core/series';
+import Plotly from 'plotly.js';
 
 // --- LOCAL IMPORTS --- //
 import * as constants from './constants';
-import Plotly from './_plotly';
+// import Plotly from './_plotly';
 import * as utils from './utils';
 
 
