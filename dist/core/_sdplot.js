@@ -43,13 +43,13 @@ var _series = require('pandas-js/dist/core/series');
 
 var _series2 = _interopRequireDefault(_series);
 
+var _plotly = require('plotly.js');
+
+var _plotly2 = _interopRequireDefault(_plotly);
+
 var _constants = require('./constants');
 
 var constants = _interopRequireWildcard(_constants);
-
-var _plotly = require('./_plotly');
-
-var _plotly2 = _interopRequireDefault(_plotly);
 
 var _utils = require('./utils');
 
