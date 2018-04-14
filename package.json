@@ -1,6 +1,6 @@
 {
   "name": "sd-plotly",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "React Plotly components with Immutable.js for rendering logic",
   "main": "./dist/index.js",
   "files": [
